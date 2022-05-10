@@ -1,4 +1,4 @@
 package org.example.pages;
 
-public class Error404 {
+public class TripSingle {
 }
