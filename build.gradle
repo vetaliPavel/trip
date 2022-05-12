@@ -37,6 +37,7 @@ dependencies {
 
     // CoffeeScript & Less support, plus resource minification
     implementation("org.apache.tapestry:tapestry-webresources:${versions.tapestry}")
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
 
     // Uncomment this to add support for spring, hibernate, bean validation and uploads
     //implementation("org.apache.tapestry:tapestry-spring:$versions.tapestry")
@@ -51,6 +52,7 @@ dependencies {
     // Miscellaneous
     implementation("org.apache.logging.log4j:log4j-api:${versions.log4j}")
     implementation("org.apache.logging.log4j:log4j-core:${versions.log4j}")
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 
     runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:${versions.log4j}")
     runtimeOnly("org.eclipse:yasson:${versions.yasson}")

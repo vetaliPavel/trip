@@ -5,7 +5,8 @@
 .idea
 target/
 bin/
-
+build/
+gradle/
 /# Log file
 *.log*
 
