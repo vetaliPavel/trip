@@ -57,17 +57,9 @@
 
                     <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
 
+                    <t:MainMenu />
 
 
-                    <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
-                        <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                            <li><a href="index.html" class="nav-link">Home</a></li>
-                            <li><a href="about.html" class="nav-link">About</a></li>
-                            <li><a href="trips.html" class="nav-link">Trips</a></li>
-                            <li class="active"><a href="blog.html" class="nav-link">Blog</a></li>
-                            <li><a href="contact.html" class="nav-link">Contact</a></li>
-                        </ul>
-                    </nav>
                 </div>
 
 
@@ -251,7 +243,7 @@
                         </div>
                     </div>
                     <div class="sidebar-box">
-                        <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-4 w-50 rounded-circle">
+                        <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-4 w-50 rounded-circle"/>
                         <h3 class="text-black">About The Author</h3>
                         <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
                         <p><a href="#" class="btn btn-primary btn-md text-white">Read More</a></p>

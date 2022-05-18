@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/aos.css"/>
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="${cssPath}/style.css"/>
 
 </head>
 
@@ -125,33 +125,12 @@
                             </div>
                             <div class="listing-item-content">
                                 <a class="px-3 mb-3 category bg-primary" href="#">$${currentTrip.price}.00</a>
-                                <h2 class="mb-1"><a href="tripSingle">${currentTrip.title}</a></h2>
+                                <h2 class="mb-1"><t:actionlink t:id="showTripDetails" context="currentTrip.id">${currentTrip.title}</t:actionlink></h2>
                             </div>
                         </div>
                     </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="images/img_2.jpg" alt="Image" class="img-fluid"/>
-                        </div>
-                        <div class="listing-item-content">
-                            <a class="px-3 mb-3 category bg-primary" href="#">$390.00</a>
-                            <h2 class="mb-1"><a href="trip-single.html">Consectetur adipisicing</a></h2>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="images/img_3.jpg" alt="Image" class="img-fluid"/>
-                        </div>
-                        <div class="listing-item-content">
-                            <a class="px-3 mb-3 category bg-primary" href="#">$180.00</a>
-                            <h2 class="mb-1"><a href="trip-single.html">Temporibus aperiam</a></h2>
-                        </div>
-                    </div>
-                </div>
+
 
 <!--                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">-->
 <!--                    <div class="listing-item">-->
@@ -202,7 +181,7 @@
                     <div class="heading-39101 mb-5">
                         <span class="backdrop text-center">Our Team</span>
                         <span class="subtitle-39191">Amazing Staff</span>
-                        <h3>Meet Our Team</h3>
+                        <h3>${message:employee}</h3>
                     </div>
                 </div>
             </div>
@@ -210,13 +189,13 @@
 
             <div class="row">
 
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div t:type="loop" source="allEmployee" value="currentEmployee" class="col-lg-4 col-md-6 mb-4">
                     <div class="person-29191 text-center">
-                        <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-4"/>
+                        <img src="images/${currentEmployee.image}" alt="Image" class="img-fluid mb-4"/>
                         <div class="px-4">
-                            <h2 class="mb-2">John Doe</h2>
-                            <p class="caption mb-4">Staff</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
+                            <h2 class="mb-2">${currentEmployee.firstName} ${currentEmployee.surName}</h2>
+                            <p class="caption mb-4">${currentEmployee.position}</p>
+                            <p>${currentEmployee.description}</p>
                             <div class="social_29128 mt-5">
                                 <a href="#"><span class="icon-facebook"></span></a>
                                 <a href="#"><span class="icon-instagram"></span></a>
@@ -226,37 +205,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="person-29191 text-center">
-                        <img src="images/person_2.jpg" alt="Image" class="img-fluid mb-4"/>
-                        <div class="px-4">
-                            <h2 class="mb-2">Jean Doe</h2>
-                            <p class="caption mb-4">Staff</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
-                            <div class="social_29128 mt-5">
-                                <a href="#"><span class="icon-facebook"></span></a>
-                                <a href="#"><span class="icon-instagram"></span></a>
-                                <a href="#"><span class="icon-twitter"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="person-29191 text-center">
-                        <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-4"/>
-                        <div class="px-4">
-                            <h2 class="mb-2">Claire Dormey</h2>
-                            <p class="caption mb-4">Staff</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, maiores? Eos alias fugit eius, repudiandae molestias error</p>
-                            <div class="social_29128 mt-5">
-                                <a href="#"><span class="icon-facebook"></span></a>
-                                <a href="#"><span class="icon-instagram"></span></a>
-                                <a href="#"><span class="icon-twitter"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
@@ -266,85 +215,85 @@
 
 
 
-    <div class="site-section">
+<!--    <div class="site-section">-->
 
-        <div class="container">
+<!--        <div class="container">-->
 
-            <div class="row justify-content-center text-center">
-                <div class="col-md-10">
-                    <div class="heading-39101 mb-5">
-                        <span class="backdrop text-center">Testimonials</span>
-                        <span class="subtitle-39191">Testimony</span>
-                        <h3>Happy Customers</h3>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="row justify-content-center text-center">-->
+<!--                <div class="col-md-10">-->
+<!--                    <div class="heading-39101 mb-5">-->
+<!--                        <span class="backdrop text-center">Testimonials</span>-->
+<!--                        <span class="subtitle-39191">Testimony</span>-->
+<!--                        <h3>${message:costomers}</h3>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <div class="owl-carousel slide-one-item">
-                <div class="row">
-                    <div class="col-md-6">
+<!--            <div class="owl-carousel slide-one-item">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6">-->
 
-                        <div class="testimonial-39191 d-flex">
-                            <div class="mr-4">
-                                <img src="images/person_1.jpg" alt="Image" class="img-fluid"/>
-                            </div>
-                            <div>
-                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                                <p>&mdash; John Doe</p>
-                            </div>
-                        </div>
+<!--                        <div class="testimonial-39191 d-flex">-->
+<!--                            <div class="mr-4">-->
+<!--                                <img src="images/person_1.jpg" alt="Image" class="img-fluid"/>-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>-->
+<!--                                <p>&mdash; John Doe</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    </div>
+<!--                    </div>-->
 
-                    <div class="col-md-6">
+<!--                    <div class="col-md-6">-->
 
-                        <div class="testimonial-39191 d-flex">
-                            <div class="mr-4">
-                                <img src="images/person_2.jpg" alt="Image" class="img-fluid"/>
-                            </div>
-                            <div>
-                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                                <p>&mdash; John Doe</p>
-                            </div>
-                        </div>
+<!--                        <div class="testimonial-39191 d-flex">-->
+<!--                            <div class="mr-4">-->
+<!--                                <img src="images/person_2.jpg" alt="Image" class="img-fluid"/>-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>-->
+<!--                                <p>&mdash; John Doe</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    </div>
-                </div>
+<!--                    </div>-->
+<!--                </div>-->
 
-                <div class="row">
-                    <div class="col-md-6">
+<!--                <div class="row">-->
+<!--                    <div class="col-md-6">-->
 
-                        <div class="testimonial-39191 d-flex">
-                            <div class="mr-4">
-                                <img src="images/person_1.jpg" alt="Image" class="img-fluid"/>
-                            </div>
-                            <div>
-                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                                <p>&mdash; John Doe</p>
-                            </div>
-                        </div>
+<!--                        <div class="testimonial-39191 d-flex">-->
+<!--                            <div class="mr-4">-->
+<!--                                <img src="images/person_1.jpg" alt="Image" class="img-fluid"/>-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>-->
+<!--                                <p>&mdash; John Doe</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    </div>
+<!--                    </div>-->
 
-                    <div class="col-md-6">
+<!--                    <div class="col-md-6">-->
 
-                        <div class="testimonial-39191 d-flex">
-                            <div class="mr-4">
-                                <img src="images/person_2.jpg" alt="Image" class="img-fluid"/>
-                            </div>
-                            <div>
-                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>
-                                <p>&mdash; John Doe</p>
-                            </div>
-                        </div>
+<!--                        <div class="testimonial-39191 d-flex">-->
+<!--                            <div class="mr-4">-->
+<!--                                <img src="images/person_2.jpg" alt="Image" class="img-fluid"/>-->
+<!--                            </div>-->
+<!--                            <div>-->
+<!--                                <blockquote>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, accusamus, facilis! Placeat praesentium alias porro aperiam facilis accusantium veniam?&rdquo;</blockquote>-->
+<!--                                <p>&mdash; John Doe</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
-                    </div>
-                </div>
+<!--                    </div>-->
+<!--                </div>-->
 
-            </div>
+<!--            </div>-->
 
-        </div>
-    </div>
+<!--        </div>-->
+<!--    </div>-->
 
 
     <div class="site-section">
@@ -355,55 +304,27 @@
                     <div class="heading-39101 mb-5">
                         <span class="backdrop text-center">Blog</span>
                         <span class="subtitle-39191">Updates</span>
-                        <h3>Our Blog</h3>
+                        <h3>${message:blog}</h3>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div t:type="loop" source="allPost" value="currentPost" class="col-lg-4 col-md-6 mb-4">
                     <div class="post-entry-1 h-100">
-                        <a href="single.html">
-                            <img src="images/img_1.jpg" alt="Image"
+                        <a href="single">
+                            <img src="images/postPhoto/${currentPost.image}" alt="Image"
                                  class="img-fluid"/>
                         </a>
                         <div class="post-entry-1-contents">
 
-                            <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
-                            <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
+                            <h2><a href="single">${currentPost.title}</a></h2>
+                            <span class="meta d-inline-block mb-3"> <span class="mx-2">by</span> <a href="#">${currentPost.name}</a></span>
+                            <p></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="post-entry-1 h-100">
-                        <a href="single.html">
-                            <img src="images/img_2.jpg" alt="Image"
-                                 class="img-fluid"/>
-                        </a>
-                        <div class="post-entry-1-contents">
-
-                            <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
-                            <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="post-entry-1 h-100">
-                        <a href="single.html">
-                            <img src="images/img_3.jpg" alt="Image"
-                                 class="img-fluid"/>
-                        </a>
-                        <div class="post-entry-1-contents">
-
-                            <h2><a href="single.html">Lorem ipsum dolor sit amet</a></h2>
-                            <span class="meta d-inline-block mb-3">July 17, 2019 <span class="mx-2">by</span> <a href="#">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eos soluta, dolore harum molestias consectetur.</p>
-                        </div>
-                    </div>
-                </div>
+<!--               -->
             </div>
         </div>
     </div>
@@ -413,9 +334,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-7 text-center">
-                    <h2 class="font-weight-bold text-white">Join and Trip With Us</h2>
+                    <h2 class="font-weight-bold text-white">${message:h1}</h2>
                     <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ut, doloremque quo molestiae nesciunt officiis veniam, beatae dignissimos!</p>
-                    <p class="mb-0"><a href="#" class="btn btn-primary text-white py-3 px-4">Get In Touch</a></p>
+                    <p class="mb-0"><a href="#" class="btn btn-primary text-white py-3 px-4">${message:singUp}</a></p>
                 </div>
             </div>
         </div>
@@ -461,7 +382,7 @@
                         </div>
                         <div class="col-lg-6">
                             <h2 class="footer-heading mb-4">Newsletter</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odio iure animi ullam quam, deleniti rem!</p>
+                            <p>${message:message} </p>
                             <form action="#" class="d-flex subscribe">
                                 <input type="text" class="form-control mr-3" placeholder="Email"/>
                                 <input type="submit" value="Send" class="btn btn-primary"/>
