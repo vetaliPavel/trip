@@ -2,11 +2,12 @@
 <t:content>
     <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
         <ul class="site-menu main-menu js-clone-nav ml-auto ">
-            <li class="${homeCssClass}"><a href="home" class="nav-link">${message:menu.home}</a></li>
-            <li class="${tripsCssClass}"><a href="trips" class="nav-link">${message:menu.trips}</a></li>
-            <li class="${blogCssClass}"><a href="blog" class="nav-link">${message:menu.blog}</a></li>
-            <li class="${contactCssClass}"><a href="contact" class="nav-link">${message:menu.contact}</a></li>
-            <li class="${aboutCssClass}"><a href="about" class="nav-link">${message:menu.about}</a></li>
+            <li class="${homeCssClass}"><a t:type="pagelink" page="${homePage}" class="nav-link">${message:menu.home}</a></li>
+            <li class="${tripsCssClass}"><a t:type="pagelink" page="${tripsPage}" class="nav-link">${message:menu.trips}</a></li>
+            <li class="${blogCssClass}"><a t:type="pagelink" page="${blogPage}" class="nav-link">${message:menu.blog}</a></li>
+            <li class="${contactCssClass}"><a t:type="pagelink" page="${contactPage}" class="nav-link">${message:menu.contact}</a></li>
+            <li class="${aboutCssClass}"><a t:type="pagelink" page="${aboutPage}" class="nav-link">${message:menu.about}</a></li>
+
         </ul>
     </nav>
 </t:content>

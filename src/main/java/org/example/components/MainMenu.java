@@ -10,6 +10,21 @@ public class MainMenu {
     void setupRender() {
 
     }
+    public String getHomePage(){
+        return "home";
+    }
+    public String getTripsPage(){
+        return "trips";
+    }
+    public String getBlogPage(){
+        return "blog";
+    }
+    public String getContactPage(){
+        return "contact";
+    }
+    public String getAboutPage(){
+        return "about";
+    }
 
     public String getHomeCssClass() {
         return activeMenu!= null && activeMenu.equals("home") ? "active" : "";
