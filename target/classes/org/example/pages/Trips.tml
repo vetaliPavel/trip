@@ -65,7 +65,7 @@
     </header>
 
     <div class="ftco-blocks-cover-1">
-        <div class="site-section-cover overlay" style="background-image: url('images/hero_1.jpg')">
+        <div class="site-section-cover overlay" style="background-image: url('images/2.3.jpg')">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
                     <div class="col-md-5" data-aos="fade-up">
@@ -92,14 +92,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                <div t:type="loop" source="allTrips" value="currentTrip" class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
                     <div class="listing-item">
                         <div class="listing-image">
-                            <img src="images/img_1.jpg" alt="Image" class="img-fluid"/>
+                            <img src="images/${currentTrip.image}" alt="Image" class="img-fluid"/>
                         </div>
                         <div class="listing-item-content">
-                            <a class="px-3 mb-3 category bg-primary" href="#">$200.00</a>
-                            <h2 class="mb-1"><a href="trip-single.html">Dignissimos debitis</a></h2>
+                            <a class="px-3 mb-3 category bg-primary" href="#">$${currentTrip.price}.00</a>
+                            <h2 class="mb-1"><t:actionlink t:id="showTripDetails" context="currentTrip.id">${currentTrip.title}</t:actionlink></h2>
                         </div>
                     </div>
                 </div>
@@ -128,41 +128,12 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="images/img_4.jpg" alt="Image" class="img-fluid"/>
-                        </div>
-                        <div class="listing-item-content">
-                            <a class="px-3 mb-3 category bg-primary" href="#">$600.00</a>
-                            <h2 class="mb-1"><a href="trip-single.html">Expedita fugiat</a></h2>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="images/img_5.jpg" alt="Image" class="img-fluid"/>
-                        </div>
-                        <div class="listing-item-content">
-                            <a class="px-3 mb-3 category bg-primary" href="#">$330.00</a>
-                            <h2 class="mb-1"><a href="trip-single.html">Consectetur adipisicing</a></h2>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="listing-item">
-                        <div class="listing-image">
-                            <img src="images/img_6.jpg" alt="Image" class="img-fluid"/>
-                        </div>
-                        <div class="listing-item-content">
-                            <a class="px-3 mb-3 category bg-primary" href="#">$450.00</a>
-                            <h2 class="mb-1"><a href="trip-single.html">Consectetur Amet</a></h2>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
 
             </div>
 

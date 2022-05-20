@@ -12,6 +12,7 @@ import org.example.entities.Post;
 import org.example.entities.Trip;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
@@ -35,9 +36,11 @@ public class Home {
     @Inject
     @Symbol(SymbolConstants.CONTEXT_PATH)
     private String contextPath;
+    public static final int CATEGORY_MOUNTAINS = 1;
 
     public List<Trip> getTrips(){
         Criteria criteria = session.createCriteria(Trip.class);
+        criteria.add(Restrictions.eq("category", CATEGORY_MOUNTAINS));
         return criteria.list();
     }
     public List<Employee> getEmployee(){
