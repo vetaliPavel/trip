@@ -130,44 +130,6 @@
                         </div>
                     </div>
 
-
-
-<!--                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">-->
-<!--                    <div class="listing-item">-->
-<!--                        <div class="listing-image">-->
-<!--                            <img src="images/tour_4.jpg" alt="Image" class="img-fluid"/>-->
-<!--                        </div>-->
-<!--                        <div class="listing-item-content">-->
-<!--                            <a class="px-3 mb-3 category bg-primary" href="#">$600.00</a>-->
-<!--                            <h2 class="mb-1"><a href="trip-single.html">Expedita fugiat</a></h2>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">-->
-<!--                    <div class="listing-item">-->
-<!--                        <div class="listing-image">-->
-<!--                            <img src="images/tour_5.jpg" alt="Image" class="img-fluid"/>-->
-<!--                        </div>-->
-<!--                        <div class="listing-item-content">-->
-<!--                            <a class="px-3 mb-3 category bg-primary" href="#">$330.00</a>-->
-<!--                            <h2 class="mb-1"><a href="trip-single.html">Consectetur adipisicing</a></h2>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">-->
-<!--                    <div class="listing-item">-->
-<!--                        <div class="listing-image">-->
-<!--                            <img src="images/tour_6.jpg" alt="Image" class="img-fluid"/>-->
-<!--                        </div>-->
-<!--                        <div class="listing-item-content">-->
-<!--                            <a class="px-3 mb-3 category bg-primary" href="#">$450.00</a>-->
-<!--                            <h2 class="mb-1"><a href="trip-single.html">Consectetur Amet</a></h2>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
             </div>
 
         </div>
@@ -349,7 +311,7 @@
                     <h2 class="footer-heading mb-3">Instagram</h2>
                     <div class="row">
                         <div class="col-4 gal_col">
-                            <a href="#"><img src="images/insta_1.jpg" alt="Image" class="img-fluid"/></a>
+                            <a href="#"><img src="images/tour_1.jpg" alt="Image" class="img-fluid"/></a>
                         </div>
                         <div class="col-4 gal_col">
                             <a href="#"><img src="images/insta_2.jpg" alt="Image" class="img-fluid"/></a>
