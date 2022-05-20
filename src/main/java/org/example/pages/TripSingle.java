@@ -12,7 +12,7 @@ import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
-public class TripSingle {
+public class TripSingle extends BasePage {
 
     @Property
     private Long tripId;
@@ -30,9 +30,7 @@ public class TripSingle {
     void setupRender(){
         if(tripId!=null){
             List<Trip> trips = null;
-            Criteria criteria = session.createCriteria(Trip.class);
-            criteria.add(Restrictions.eq("id", tripId));
-            trips = criteria.list();
+          trips = getTripsById(tripId);
             if(trips!= null && !trips.isEmpty()){
                 trip = trips.get(0);
             }

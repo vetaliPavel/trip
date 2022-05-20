@@ -16,7 +16,7 @@ import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
-public class Home {
+public class Home extends BasePage {
     @Property
     private List<Trip> allTrips;
     @Property
@@ -29,42 +29,29 @@ public class Home {
     private Employee currentEmployee;
     @Property
     private Post currentPost;
-    @Inject
-    private Session session;
+    public static final int CATEGORY_MOUNTAINS = 1;
     @Inject
     private PageRenderLinkSource linkSource;
     @Inject
     @Symbol(SymbolConstants.CONTEXT_PATH)
     private String contextPath;
-    public static final int CATEGORY_MOUNTAINS = 1;
 
-    public List<Trip> getTrips(){
-        Criteria criteria = session.createCriteria(Trip.class);
-        criteria.add(Restrictions.eq("category", CATEGORY_MOUNTAINS));
-        return criteria.list();
+    void setupRender(){
+        allTrips = getTripsByCategory(CATEGORY_MOUNTAINS);
+        allEmployee = getEmployees();
+        allPost = getPosts();
     }
-    public List<Employee> getEmployee(){
-        Criteria criteria = session.createCriteria(Employee.class);
-      return criteria.list();
-    }
-    public List<Post> getPost(){
-        Criteria criteria = session.createCriteria(Post.class);
-        return criteria.list();
+    public Link onActionFromShowTripDetails(long id){
+        return linkSource.createPageRenderLinkWithContext(TripSingle.class, id);
     }
 
     public String getCssPath(){
         return this.contextPath + "/css";
     }
 
-    void setupRender(){
-        allTrips = getTrips();
-        allEmployee = getEmployee();
-        allPost = getPost();
-    }
     public String getHomePage(){
         return "home";
     }
-    public Link onActionFromShowTripDetails(long id){
-        return linkSource.createPageRenderLinkWithContext(TripSingle.class, id);
-    }
+
+
 }
