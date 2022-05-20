@@ -12,6 +12,9 @@ public class Trip {
     private int price;
     private String description;
     private String image;
+    private int category;
+    private String story;
+
 
     public Long getId() {
         return id;
@@ -59,6 +62,22 @@ public class Trip {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = category;
+    }
+
+    public String getStory() {
+        return story;
+    }
+
+    public void setStory(String story) {
+        this.story = story;
     }
 }
 
