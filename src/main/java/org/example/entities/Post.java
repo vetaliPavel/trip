@@ -2,16 +2,22 @@ package org.example.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import java.util.Date;
+import java.util.List;
+
 @Entity
 public class Post {
     @Id
-    public Long id;
-    public Date date;
-    public String name;
-    public String title;
-    public String description;
-    public String image;
+    private Long id;
+    private Date date;
+    private String name;
+    private String title;
+    private String description;
+    private String image;
+    @OneToMany(mappedBy="post")
+    public List<Comment> comments;
 
     public Long getId() {
         return id;
@@ -59,5 +65,13 @@ public class Post {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }

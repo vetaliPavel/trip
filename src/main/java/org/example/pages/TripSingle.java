@@ -37,16 +37,6 @@ public class TripSingle extends BasePage {
         }
     }
 
-    @Inject
-    @Symbol(SymbolConstants.CONTEXT_PATH)
-    private String contextPath;
-
-    public String getCssPath(){
-        return this.contextPath + "/css";
-    }
-    public String getImagesPath(){
-        return this.contextPath + "/images";
-    }
     public String getBackgroundImage(){
         return "background-image:url('"+ getImagesPath() +"/fullImage/"+trip.getImage()+"')";
     }

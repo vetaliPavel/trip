@@ -7,6 +7,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.ioc.annotations.Symbol;
 import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.example.dao.TripDao;
+import org.example.entities.Comment;
 import org.example.entities.Employee;
 import org.example.entities.Post;
 import org.example.entities.Trip;

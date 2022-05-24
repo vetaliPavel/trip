@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="${cssPath}/bootstrap-datepicker.css"/>
     <link rel="stylesheet" href="${cssPath}/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="${cssPath}/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="${cssPath}/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"/>
-    <link rel="stylesheet" href="css/aos.css"/>
+    <link rel="stylesheet" href="${cssPath}/aos.css"/>
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="${cssPath}/style.css"/>
