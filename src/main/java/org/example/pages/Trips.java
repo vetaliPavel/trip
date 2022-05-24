@@ -11,7 +11,7 @@ import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
-public class Trips {
+public class Trips extends BasePage{
 
     public String getTripsPage(){
         return "trips";
@@ -21,22 +21,18 @@ public class Trips {
     private List<Trip> allTrips;
     @Property
     private Trip currentTrip;
-    @Inject
-    private Session session;
+
     @Inject
     private PageRenderLinkSource linkSource;
     public static final int CATEGORY_SEA = 2;
 
-    public List<Trip> getTrips(){
-        Criteria criteria = session.createCriteria(Trip.class);
-        criteria.add(Restrictions.eq("category", CATEGORY_SEA));
-        return criteria.list();
-    }
+
+
     void setupRender() {
-        allTrips = getTrips();
+        allTrips = getTripsByCategory(CATEGORY_SEA);
     }
     public Link onActionFromShowTripDetails(long id){
-        return linkSource.createPageRenderLinkWithContext(TripSingle.class, id);
+        return linkSource.createPageRenderLinkWithContext(Single.class, id);
     }
 
 
