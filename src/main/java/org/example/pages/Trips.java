@@ -32,7 +32,7 @@ public class Trips extends BasePage{
         allTrips = getTripsByCategory(CATEGORY_SEA);
     }
     public Link onActionFromShowTripDetails(long id){
-        return linkSource.createPageRenderLinkWithContext(Single.class, id);
+        return linkSource.createPageRenderLinkWithContext(TripSingle.class, id);
     }
 
 

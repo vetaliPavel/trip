@@ -75,6 +75,12 @@ public class BasePage {
     public String getImagesPath(){
         return this.contextPath + "/images";
     }
+    public String getFontsPath(){
+        return this.contextPath + "/fonts";
+    }
+    public String getJsPath(){
+        return this.contextPath + "/js";
+    }
 
 
 }

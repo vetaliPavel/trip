@@ -18,6 +18,10 @@ import org.hibernate.criterion.Restrictions;
 import java.util.List;
 
 public class Home extends BasePage {
+    public String getHomePage(){
+        return "home";
+    }
+
     @Property
     private List<Trip> allTrips;
     @Property
@@ -45,14 +49,13 @@ public class Home extends BasePage {
     public Link onActionFromShowTripDetails(long id){
         return linkSource.createPageRenderLinkWithContext(TripSingle.class, id);
     }
-
-    public String getCssPath(){
-        return this.contextPath + "/css";
+    public Link onActionFromShowPostDetails(long id) {
+        return linkSource.createPageRenderLinkWithContext(Single.class, id);
     }
 
-    public String getHomePage(){
-        return "home";
-    }
+
+
+
 
 
 }
