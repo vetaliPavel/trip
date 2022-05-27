@@ -17,7 +17,8 @@ public class Comment {
     @JoinColumn(name ="post_id")
     public Post post;
 
-    public Comment(){}
+    public Comment(){
+    }
     public Comment(Post post){
         this.post=post;
     }

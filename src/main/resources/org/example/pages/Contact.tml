@@ -6,21 +6,17 @@
     <title>Trips &mdash; Website Template by Colorlib</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900 display=swap" rel="stylesheet"/>
-
-    <link rel="stylesheet" href="fonts/icomoon/style.css"/>
-
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css"/>
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
-    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"/>
-    <link rel="stylesheet" href="css/aos.css"/>
-
+    <link rel="stylesheet" href="${fontsPath}/icomoon/style.css"/>
+    <link rel="stylesheet" href="${cssPath}/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${cssPath}/bootstrap-datepicker.css"/>
+    <link rel="stylesheet" href="${cssPath}/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="${cssPath}/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="${cssPath}/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="${fontsPath}/flaticon/font/flaticon.css"/>
+    <link rel="stylesheet" href="${cssPath}/aos.css"/>
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="${cssPath}/style.css"/>
 
 </head>
 
@@ -229,40 +225,40 @@
                     <h2 class="footer-heading mb-3">Instagram</h2>
                     <div class="row">
                         <div class="col-4 gal_col">
-                            <a href="#"><img src="images/insta_1.jpg" alt="Image" class="img-fluid"/></a>
+                            <a href="#"><img src="images/tour_1.jpg" alt="Image" class="img-fluid"/></a>
                         </div>
                         <div class="col-4 gal_col">
-                            <a href="#"><img src="images/insta_2.jpg" alt="Image" class="img-fluid"/></a>
+                            <a href="#"><img src="images/tour_2.jpg" alt="Image" class="img-fluid"/></a>
                         </div>
                         <div class="col-4 gal_col">
-                            <a href="#"><img src="images/insta_3.jpg" alt="Image" class="img-fluid"/></a>
+                            <a href="#"><img src="images/tour_3.jpg" alt="Image" class="img-fluid"/></a>
                         </div>
                         <div class="col-4 gal_col">
-                            <a href="#"><img src="images/insta_4.jpg" alt="Image" class="img-fluid"/></a>
+                            <a href="#"><img src="images/tour_4.jpg" alt="Image" class="img-fluid"/></a>
                         </div>
                         <div class="col-4 gal_col">
-                            <a href="#"><img src="images/insta_5.jpg" alt="Image" class="img-fluid"/></a>
+                            <a href="#"><img src="images/tour_5.jpg" alt="Image" class="img-fluid"/></a>
                         </div>
                         <div class="col-4 gal_col">
-                            <a href="#"><img src="images/insta_6.jpg" alt="Image" class="img-fluid"/></a>
+                            <a href="#"><img src="images/tour_6.jpg" alt="Image" class="img-fluid"/></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8 ml-auto">
                     <div class="row">
                         <div class="col-lg-6 ml-auto">
-                            <h2 class="footer-heading mb-4">Quick Links</h2>
+                            <h2 class="footer-heading mb-4">${message:links}</h2>
                             <ul class="list-unstyled">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">${message:tours}</a></li>
+                                <li><a href="#">${message:hotel}</a></li>
+                                <li><a href="#">${message:fastTour}</a></li>
+                                <li><a href="#">${message:city}</a></li>
+                                <li><a href="#">${message:operators}</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="footer-heading mb-4">Newsletter</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt odio iure animi ullam quam, deleniti rem!</p>
+                            <h2 class="footer-heading mb-4">${message:direction}</h2>
+                            <p>${message:message}</p>
                             <form action="#" class="d-flex subscribe">
                                 <input type="text" class="form-control mr-3" placeholder="Email"/>
                                 <input type="submit" value="Send" class="btn btn-primary"/>
@@ -277,7 +273,7 @@
                     <div class="border-top pt-5">
                         <p>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+                            Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://Style.md" target="_blank" >Style.md</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
@@ -289,22 +285,22 @@
 
 </div>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-migrate-3.0.0.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap-datepicker.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/aos.js"></script>
+<script src="${jsPath}/jquery-3.3.1.min.js"></script>
+<script src="${jsPath}/jquery-migrate-3.0.0.js"></script>
+<script src="${jsPath}/popper.min.js"></script>
+<script src="${jsPath}/bootstrap.min.js"></script>
+<script src="${jsPath}/owl.carousel.min.js"></script>
+<script src="${jsPath}/jquery.sticky.js"></script>
+<script src="${jsPath}/jquery.waypoints.min.js"></script>
+<script src="${jsPath}/jquery.animateNumber.min.js"></script>
+<script src="${jsPath}/jquery.fancybox.min.js"></script>
+<script src="${jsPath}/jquery.stellar.min.js"></script>
+<script src="${jsPath}/jquery.easing.1.3.js"></script>
+<script src="${jsPath}/bootstrap-datepicker.min.js"></script>
+<script src="${jsPath}/isotope.pkgd.min.js"></script>
+<script src="${jsPath}/aos.js"></script>
 
-<script src="js/main.js"></script>
+<script src="${jsPath}/main.js"></script>
 
 </body>
 

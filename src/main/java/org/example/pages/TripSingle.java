@@ -15,7 +15,7 @@ import java.util.List;
 public class TripSingle extends BasePage {
 
     @Property
-    private Long tripId;
+    private long tripId;
     @Inject
     private Session session;
     @Property
@@ -28,7 +28,7 @@ public class TripSingle extends BasePage {
 
     }
     void setupRender(){
-        if(tripId!=null){
+        if(tripId!=0){
             List<Trip> trips = null;
           trips = getTripsById(tripId);
             if(trips!= null && !trips.isEmpty()){
