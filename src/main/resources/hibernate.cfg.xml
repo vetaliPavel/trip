@@ -4,7 +4,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://ec2-34-242-8-97.eu-west-1.compute.amazonaws.com:3306/d2bj3c9soviomr?sslmode=require</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-34-242-8-97.eu-west-1.compute.amazonaws.com:5432/d2bj3c9soviomr?sslmode=require</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hibernate.connection.username">ymhhmsieopwauv</property>
         <property name="hibernate.connection.password">477ea1164f2bb0e5e4da3b3777ee5053236247ec919e36a2f84f8cd8c0ff4519</property>
