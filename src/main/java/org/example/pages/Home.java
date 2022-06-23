@@ -7,10 +7,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.ioc.annotations.Symbol;
 import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.example.dao.TripDao;
-import org.example.entities.Comment;
-import org.example.entities.Employee;
-import org.example.entities.Post;
-import org.example.entities.Trip;
+import org.example.entities.*;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -29,6 +26,10 @@ public class Home extends BasePage {
     @Property
     private List<Post> allPost;
     @Property
+    private List<Review> allReview;
+    @Property
+    private Review currentReview;
+    @Property
     private Trip currentTrip;
     @Property
     private Employee currentEmployee;
@@ -45,6 +46,7 @@ public class Home extends BasePage {
         allTrips = getTripsByCategory(CATEGORY_MOUNTAINS);
         allEmployee = getEmployees();
         allPost = getPosts();
+        allReview = getReview();
     }
     public Link onActionFromShowTripDetails(long id){
         return linkSource.createPageRenderLinkWithContext(TripSingle.class, id);

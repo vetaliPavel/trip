@@ -4,10 +4,7 @@ import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.ioc.annotations.Symbol;
-import org.example.entities.Comment;
-import org.example.entities.Employee;
-import org.example.entities.Post;
-import org.example.entities.Trip;
+import org.example.entities.*;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -56,6 +53,11 @@ public class BasePage {
         Criteria criteria = session.createCriteria(Comment.class);
         return criteria.list();
     }
+    public List<Review> getReview() {
+        Criteria criteria = session.createCriteria(Review.class);
+        return criteria.list();
+    }
+
     @CommitAfter
     public void saveObject(Object object) {
         session.persist(object);

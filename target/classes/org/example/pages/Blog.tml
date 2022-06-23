@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
-
-<head>
-    <title>Trips &mdash; Website Template by Colorlib</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900 display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="${fontsPath}/icomoon/style.css"/>
-    <link rel="stylesheet" href="${cssPath}/bootstrap.min.css"/>
-    <link rel="stylesheet" href="${cssPath}/bootstrap-datepicker.css"/>
-    <link rel="stylesheet" href="${cssPath}/jquery.fancybox.min.css"/>
-    <link rel="stylesheet" href="${cssPath}/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="${cssPath}/owl.theme.default.min.css"/>
-    <link rel="stylesheet" href="${fontsPath}/flaticon/font/flaticon.css"/>
-    <link rel="stylesheet" href="${cssPath}/aos.css"/>
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="${cssPath}/style.css"/>
-
-</head>
-
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-
-<div class="site-wrap" id="home-section">
+<t:mainview xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
 
     <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
@@ -33,8 +9,6 @@
         <div class="site-mobile-menu-body"></div>
     </div>
 
-
-
     <header class="site-navbar site-navbar-target" role="banner">
 
         <div class="container">
@@ -42,28 +16,23 @@
 
                 <div class="col-3 ">
                     <div class="site-logo">
-                        <a href="index.html" class="font-weight-bold">
+                        <a href="https://Style.md" class="font-weight-bold">
                             <img src="images/logo.png" alt="Image" class="img-fluid"/>
                         </a>
                     </div>
                 </div>
 
                 <div class="col-9  text-right">
-
-
                     <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
 
                     <t:MainMenu activeMenu="blogPage"/>
                 </div>
-
-
             </div>
         </div>
-
     </header>
 
     <div class="ftco-blocks-cover-1">
-        <div class="site-section-cover overlay" style="background-image: url('images/2.8.jpg')">
+        <div class="site-section-cover overlay" style="background-image: url('images/blog.jpg')">
             <div class="container">
                 <div class="row align-items-center justify-content-center text-center">
                     <div class="col-md-5" data-aos="fade-up">
@@ -76,10 +45,8 @@
         </div>
     </div>
 
-
     <div class="site-section">
         <div class="container">
-
 
             <div class="row">
                 <div t:type="loop" source="allPost" value="currentPost" class="col-lg-4 col-md-6 mb-4">
@@ -95,18 +62,7 @@
                         </div>
                     </div>
                 </div>
-                
-
-
-
-
-
-
-
-
             </div>
-
-
             <div class="col-12 mt-5 text-center">
                 <span class="p-3">1</span>
                 <a href="#" class="p-3">2</a>
@@ -117,91 +73,4 @@
         </div>
     </div> <!-- END .site-section -->
 
-    <footer class="site-footer bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <h2 class="footer-heading mb-3">Instagram</h2>
-                    <div class="row">
-                        <div class="col-4 gal_col">
-                            <a href="#"><img src="images/tour_1.jpg" alt="Image" class="img-fluid"/></a>
-                        </div>
-                        <div class="col-4 gal_col">
-                            <a href="#"><img src="images/tour_2.jpg" alt="Image" class="img-fluid"/></a>
-                        </div>
-                        <div class="col-4 gal_col">
-                            <a href="#"><img src="images/tour_3.jpg" alt="Image" class="img-fluid"/></a>
-                        </div>
-                        <div class="col-4 gal_col">
-                            <a href="#"><img src="images/tour_4.jpg" alt="Image" class="img-fluid"/></a>
-                        </div>
-                        <div class="col-4 gal_col">
-                            <a href="#"><img src="images/tour_5.jpg" alt="Image" class="img-fluid"/></a>
-                        </div>
-                        <div class="col-4 gal_col">
-                            <a href="#"><img src="images/tour_6.jpg" alt="Image" class="img-fluid"/></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 ml-auto">
-                    <div class="row">
-                        <div class="col-lg-6 ml-auto">
-                            <h2 class="footer-heading mb-4">${message:links}</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="#">${message:tours}</a></li>
-                                <li><a href="#">${message:hotel}</a></li>
-                                <li><a href="#">${message:fastTour}</a></li>
-                                <li><a href="#">${message:city}</a></li>
-                                <li><a href="#">${message:operators}</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <h2 class="footer-heading mb-4">${message:direction}</h2>
-                            <p>${message:message}</p>
-                            <form action="#" class="d-flex subscribe">
-                                <input type="text" class="form-control mr-3" placeholder="Email"/>
-                                <input type="submit" value="Send" class="btn btn-primary"/>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-5 mt-5 text-center">
-                <div class="col-md-12">
-                    <div class="border-top pt-5">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://Style.md" target="_blank" >Style.md</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-</div>
-
-<script src="${jsPath}/jquery-3.3.1.min.js"></script>
-<script src="${jsPath}/jquery-migrate-3.0.0.js"></script>
-<script src="${jsPath}/popper.min.js"></script>
-<script src="${jsPath}/bootstrap.min.js"></script>
-<script src="${jsPath}/owl.carousel.min.js"></script>
-<script src="${jsPath}/jquery.sticky.js"></script>
-<script src="${jsPath}/jquery.waypoints.min.js"></script>
-<script src="${jsPath}/jquery.animateNumber.min.js"></script>
-<script src="${jsPath}/jquery.fancybox.min.js"></script>
-<script src="${jsPath}/jquery.stellar.min.js"></script>
-<script src="${jsPath}/jquery.easing.1.3.js"></script>
-<script src="${jsPath}/bootstrap-datepicker.min.js"></script>
-<script src="${jsPath}/isotope.pkgd.min.js"></script>
-<script src="${jsPath}/aos.js"></script>
-
-<script src="${jsPath}/main.js"></script>
-
-</body>
-
-</html>
-
+</t:mainview>

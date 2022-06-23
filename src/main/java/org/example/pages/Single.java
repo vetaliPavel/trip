@@ -1,7 +1,9 @@
 package org.example.pages;
 
+import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.example.entities.Comment;
 import org.example.entities.Post;
@@ -22,6 +24,8 @@ public class Single extends BasePage {
     @Persist
     @Property
     private Comment newComment;
+    @Component(id="commentForm")
+    private Form commentForm;
 
     void onActivate(long postId) {
         this.postId = postId;
@@ -42,6 +46,13 @@ public class Single extends BasePage {
             }
         }
         newComment = new Comment(post);
+    }
+    public void onValidateFromCommentForm(){
+        if(newComment.getEmail()== null){
+            commentForm.recordError("Enter your email");
+        }else if (!newComment.getEmail().contains("@")){
+            commentForm.recordError("Email is not valid");
+        }
     }
 
     public void onSuccessFromCommentForm(){
